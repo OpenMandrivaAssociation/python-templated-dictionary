@@ -21,6 +21,7 @@ Dictionary where __getitem__() is run through Jinja2 template.
 %package -n python3-%{pypi_name}
 Summary:	Dictionary with Jinja2 expansion
 Group:		Development/Python
+Provides:	python-%{pypi_name} = %{EVRD}
 
 %description -n python3-%{pypi_name}
 Dictionary where __getitem__() is run through Jinja2 template.
