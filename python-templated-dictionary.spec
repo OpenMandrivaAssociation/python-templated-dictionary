@@ -12,30 +12,19 @@ BuildArch:	noarch
 BuildRequires:	python3-devel
 BuildRequires:	python3dist(jinja2)
 BuildRequires:	python3dist(setuptools)
+%rename python3-%{pypi_name}
 
 %description
 Dictionary where __getitem__() is run through Jinja2 template.
 
-#----------------------------------------------------------------------------
-
-%package -n python3-%{pypi_name}
-Summary:	Dictionary with Jinja2 expansion
-Group:		Development/Python
-Provides:	python-%{pypi_name} = %{EVRD}
-
-%description -n python3-%{pypi_name}
-Dictionary where __getitem__() is run through Jinja2 template.
-
-%files -n python3-%{pypi_name}
+%files
 %doc README.md
 %license LICENSE
 %{python3_sitelib}/templated_dictionary-*.egg-info/
 %{python3_sitelib}/templated_dictionary/
 
-#----------------------------------------------------------------------------
-
 %prep
-%setup -qn %{pypi_name}-%{name}-%{version}-1
+%autosetup -p1 -n %{pypi_name}-%{name}-%{version}-1
 
 %build
 %py3_build
