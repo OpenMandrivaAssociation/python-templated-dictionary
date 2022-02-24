@@ -3,7 +3,7 @@
 Summary:	Dictionary with Jinja2 expansion
 Name:		python-%{pypi_name}
 Version:	1.1
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Development/Python
 Url:		https://github.com/xsuchy/templated-dictionary
